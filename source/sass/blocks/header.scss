@@ -277,6 +277,9 @@
 
 @media (max-width: 621px) {
   .header {
+    .header__nav {
+      margin-bottom: 75px;
+    }
     .header__title {
       font-size: 40px;
       font-weight: 400;
