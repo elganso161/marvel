@@ -6,6 +6,7 @@ body {
 }
 
 body.active {
+  width: 100%;
   position: fixed;
 }
 
@@ -44,9 +45,8 @@ ul {
   margin: 0 auto;
 }
 
-// @media (max-width: 1024px) {
-//   .container {
-//     width: 90%;
-//     margin: 0 auto;
-//   }
-// }
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+}
