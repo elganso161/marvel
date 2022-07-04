@@ -1,0 +1,297 @@
+.header {
+  background-image: url(../img/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+
+  .header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10vw;
+    .header__logo {
+      a {
+        svg {
+          path {
+            fill: #000;
+          }
+        }
+      }
+    }
+
+    .header__nav-list {
+      display: flex;
+      justify-content: space-between;
+      width: 500px;
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          font-family: "Sofia Pro";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 18px;
+          color: #000000;
+          transition: 0.2s;
+          &:hover {
+            color: #f6d330;
+          }
+        }
+      }
+      .contact-us {
+        display: none;
+        margin: 0 auto;
+        padding-left: 40px;
+        align-items: center;
+        text-decoration: none;
+        width: 196px;
+        height: 48px;
+        background-color: #f9d023;
+        font-family: "Sofia Pro";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 0.6px;
+        color: #0b0d21;
+        position: relative;
+        margin-top: 88px;
+        margin-bottom: 100px;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 20px;
+          height: 10px;
+          top: 18px;
+          right: 30px;
+          z-index: 1;
+          background-image: url(../img/contact-us.svg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+
+  .header__title {
+    font-family: "Alata";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 115px;
+    line-height: 130px;
+    text-align: center;
+    color: #ffffff;
+  }
+  .header__subtitle {
+    font-family: "Sofia Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: center;
+    color: #ffffff;
+    max-width: 950px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+
+  .header__link {
+    display: flex;
+    margin: 0 auto;
+    padding-left: 40px;
+    align-items: center;
+    text-decoration: none;
+    width: 196px;
+    height: 48px;
+    background-color: #f9d023;
+    font-family: "Sofia Pro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.6px;
+    color: #0b0d21;
+    position: relative;
+    margin-bottom: 227px;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 10px;
+      top: 18px;
+      right: 30px;
+      z-index: 1;
+      background-image: url(../img/contact-us.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .header__link-more {
+    display: block;
+    width: 93px;
+    margin: 0 auto;
+    font-family: "Sofia Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    text-decoration: none;
+    padding-bottom: 50px;
+    &::before {
+      position: absolute;
+      content: "";
+      top: -130px;
+      left: 50px;
+      z-index: 1;
+      z-index: 1;
+      width: 1px;
+      height: 101px;
+      background: #f9d023;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    .header__nav {
+      padding: 0 20px;
+      .burger__menu {
+        cursor: pointer;
+        display: block;
+        width: 25px;
+        height: 25px;
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          top: 6px;
+          left: 0;
+          z-index: 1;
+          background-color: #000000;
+          width: 100%;
+          height: 2px;
+        }
+        &::after {
+          position: absolute;
+          content: "";
+          top: 16px;
+          left: 0;
+          z-index: 1;
+          background-color: #000000;
+          width: 100%;
+          height: 2px;
+        }
+      }
+      .burger__menu.active {
+        cursor: pointer;
+        &::before {
+          top: 10px;
+          transform: rotate(45deg);
+          background-color: #fff;
+        }
+        &::after {
+          top: 10px;
+          transform: rotate(-45deg);
+          background-color: #fff;
+        }
+      }
+
+      .header__nav-list {
+        position: fixed;
+        top: -1000px;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        li:first-child {
+          padding-top: 50px;
+        }
+        li {
+          margin: 0 auto;
+          margin-bottom: 24px;
+          a {
+            font-family: "Alata";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 48px;
+            color: #000000;
+          }
+        }
+        .contact-us {
+          display: flex;
+        }
+      }
+      .header__nav-list.active {
+        top: 70px;
+      }
+    }
+
+    .header__nav.active {
+      background-color: #000000;
+      .header__logo {
+        a {
+          svg {
+            path {
+              fill: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .header__title {
+      font-size: 90px;
+    }
+    .header__subtitle {
+      font-size: 20px;
+      max-width: 785px;
+    }
+  }
+}
+
+@media (max-width: 786px) {
+  .header {
+    .header__title {
+      font-size: 70px;
+    }
+    .header__subtitle {
+      font-size: 18px;
+      max-width: 640px;
+    }
+  }
+}
+
+@media (max-width: 621px) {
+  .header {
+    .header__title {
+      font-size: 40px;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 60px;
+    }
+    .header__subtitle {
+      font-size: 16px;
+      max-width: 540px;
+    }
+
+    .header__link-more {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

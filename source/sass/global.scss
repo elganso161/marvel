@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #0e0e0e;
+  min-width: 320px;
+}
+
+body.active {
+  position: fixed;
+}
+
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+.container {
+  max-width: 1108px;
+  margin: 0 auto;
+}
+
+// @media (max-width: 1024px) {
+//   .container {
+//     width: 90%;
+//     margin: 0 auto;
+//   }
+// }
